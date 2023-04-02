@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style_home.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Poppins:wght@100;200;300;500;600;700;800&display=swap');
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="nav">
+            <img class="logo_music" src="image/lg_music.png" alt="logo">
+            
+            <ul>
+                <li class=""> <a href="#">Home</a> </li>
+                <li class=""> <a href="#">About</a> </li>
+                <li class=""> <a href="#">New music</a> </li>
+                <li class=""> <a href="#">Album</a> </li>
+                <li class=""> <a href="#">Login</a> </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="section_one">
+                <h3> The <br> intense <br> music</h3>
+            </div>
+
+            <div class="section_two">
+                THe image conceptium royality
+                <div class="secund_section">
+                    <p class="title">title.mp3</p>
+                    <p class="artist">artist_song</p>
+                </div>
+                <div class="first_section">
+                    <img class="track_image" src="image/bg_headphone_1.jpg" alt="img_song">
+                    <div class="card">
+                        <p id="volume_show">90</p>
+                        <button>
+                            <i class="fa-solid fa-volume-high" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
+                        </button>
+                    </div>
+                    
+                    <input type="range" min="0" max="100" value="90" onchange="volume_change()"  id="">
+                </div>
+                <div class="third_section">
+                    <button onclick="previous_song()" id="previous">
+                        <i class="fa-solid fa-backward fa-lg"></i>
+                    </button>
+                    <button onclick="pay_song()" id="player">
+                        <i class="fa-regular fa-play fa-lg"></i>
+                    </button>
+                    <button onclick="next_song()" id="next">
+                        <i class="fa-solid fa-forward fa-lg"></i>
+                    </button>
+                </div>
+                <div class="fr_section duration">
+                    <input type="range"min="0" max="100" value="0" id="duration_slider" 
+                        onchange="change_duration()">
+                </div>
+                <button id="icon" id="auto" onclick="autoplay_switch()"> 
+                    Auto play <i></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <audio id="song">
+        <source src="./audio/audio_1.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="/function.js"></script>
+</body>
+</html>
