@@ -9,6 +9,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Poppins:wght@100;200;300;500;600;700;800&display=swap');
     </style>
+    
 </head>
 <body>
     
@@ -32,13 +33,13 @@
             </div>
 
             <div class="section_two">
-                THe image conceptium royality
+                THe image conceptium royalityé
                 <div class="secund_section">
-                    <p class="title">title.mp3</p>
-                    <p class="artist">artist_song</p>
+                    <p id="title">title</p>
+                    <p id="artist">artist_song</p>
                 </div>
                 <div class="first_section">
-                    <img class="track_image" src="image/bg_headphone_1.jpg" alt="img_song">
+                    <img id="track_image" src="image/bg_headphone_1.jpg" alt="img_song">
                     <div class="card">
                         <p id="volume_show">90</p>
                         <button>
@@ -46,35 +47,32 @@
                         </button>
                     </div>
                     
-                    <input type="range" min="0" max="100" value="90" onchange="volume_change()"  id="">
+                    <input type="range" min="0" max="100" value="90" onchange="volume_change()"  id="volume">
                 </div>
                 <div class="third_section">
                     <button onclick="previous_song()" id="previous">
-                        <i class="fa-solid fa-backward fa-lg"></i>
+                        <i class="fa-solid fa-backward fa-lg">Previous</i>
                     </button>
-                    <button onclick="pay_song()" id="player">
-                        <i class="fa-regular fa-play fa-lg"></i>
+                    <button onclick="justplay()" id="player">
+                        <i class="fa-regular fa-play fa-lg">Play</i>
                     </button>
                     <button onclick="next_song()" id="next">
-                        <i class="fa-solid fa-forward fa-lg"></i>
+                        <i class="fa-solid fa-forward fa-lg">Next</i>
                     </button>
                 </div>
                 <div class="fr_section duration">
                     <input type="range"min="0" max="100" value="0" id="duration_slider" 
                         onchange="change_duration()">
                 </div>
-                <button id="icon" id="auto" onclick="autoplay_switch()"> 
-                    Auto play <i></i>
+                <button id="auto" onclick="autoplay_switch()"> 
+                     <i class="">Auto play</i>
                 </button>
             </div>
 
         </div>
     </div>
 
-    <audio id="song">
-        <source src="./audio/audio_1.mp3" type="audio/mp3">
-    </audio>
-
-    <script src="/function.js"></script>
+    <script src="function.js"></script>
+    
 </body>
 </html>
